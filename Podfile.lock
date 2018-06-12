@@ -1,0 +1,58 @@
+PODS:
+  - AWSAppSync (2.6.16):
+    - AWSCore (~> 2.6.6)
+    - ReachabilitySwift (~> 4.0.0)
+    - SQLite.swift (= 0.11.4)
+  - AWSCognito (2.6.20):
+    - AWSCore (= 2.6.20)
+  - AWSCognitoIdentityProvider (2.6.20):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.6.20)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.6.20)
+  - JWTDecode (2.1.1)
+  - NVActivityIndicatorView (4.2.1):
+    - NVActivityIndicatorView/Presenter (= 4.2.1)
+  - NVActivityIndicatorView/Presenter (4.2.1)
+  - ReachabilitySwift (4.0.0)
+  - ReactiveZ (0.0.9)
+  - SQLite.swift (0.11.4):
+    - SQLite.swift/standard (= 0.11.4)
+  - SQLite.swift/standard (0.11.4)
+
+DEPENDENCIES:
+  - AWSAppSync (~> 2.6.15)
+  - AWSCognito
+  - AWSCognitoIdentityProvider
+  - JWTDecode (~> 2.1)
+  - NVActivityIndicatorView
+  - ReactiveZ
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AWSAppSync
+    - AWSCognito
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - JWTDecode
+    - NVActivityIndicatorView
+    - ReachabilitySwift
+    - ReactiveZ
+    - SQLite.swift
+
+SPEC CHECKSUMS:
+  AWSAppSync: eb2758d2a60518b6c814c119de511dbae1b3fa97
+  AWSCognito: 76b0fcfa24c6432b95059775c38e66ca7f18f839
+  AWSCognitoIdentityProvider: 82158b2c4555ceab8c04368f9cc9ef216bf862e6
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: dd4d3d4fcafdce68a42025c3e9e45b026cf1f33b
+  JWTDecode: 83e8b381aafe27158d9f692cbdca2b12d61d460c
+  NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
+  ReachabilitySwift: e67b2cab4d5386053673d8a7421b5981e5f08259
+  ReactiveZ: 2dac357e691f27a2c83928e116635f5c25a2e88c
+  SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
+
+PODFILE CHECKSUM: 28cb07fa6c6ca538e2bd7bbce772a386c525be22
+
+COCOAPODS: 1.5.0

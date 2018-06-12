@@ -1,0 +1,35 @@
+query GetArticle($id:ID!) {
+ getArticle(id:$id) {
+     id
+     title
+     author
+     description
+ }
+}
+
+query AllArticles {
+   getArticles {
+       id
+       title
+       author
+       description
+   }
+}
+
+mutation AddArticle($id:ID!, $title:String, $description:String, $author:String) {
+  insertArticle(id: $id, title: $title, description: $description, author: $author) {
+    id
+    title
+    author
+    description
+  }
+}
+
+subscription OnCreateArticle($author: String) {
+  subscribeToArticle(author: $author) {
+    id
+    author
+    title
+    description
+  }
+}
