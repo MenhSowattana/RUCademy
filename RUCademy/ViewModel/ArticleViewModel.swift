@@ -12,7 +12,7 @@ import AWSAppSync
 
 class ArticleViewModel {
     
-    let author = ObservableField("Menh Sowattana")
+    let author = ObservableField(authors[0])
     let showLoading: ObservableField<Bool> = ObservableField(false)
     let articles: ObservableField<[AllArticlesQuery.Data.GetArticle?]> = ObservableField([])
     var authorSubscription: OnCreateArticleSubscription!

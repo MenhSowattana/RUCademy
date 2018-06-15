@@ -589,6 +589,134 @@
             </objects>
             <point key="canvasLocation" x="3698.4000000000001" y="832.75862068965523"/>
         </scene>
+        <!--New Account Controller-->
+        <scene sceneID="5qT-Mt-7I5">
+            <objects>
+                <viewController storyboardIdentifier="NewUserController" id="aXw-Av-KQe" customClass="NewAccountController" customModule="RUCademy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pc7-9K-ioa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aq5-WL-wvo">
+                                <rect key="frame" x="58.000000000000007" y="99" width="95.666666666666686" height="27.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                                <color key="textColor" red="0.99882610100000002" green="0.81527264960000001" blue="0.46231724489999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create new user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsX-Rt-JZq">
+                                <rect key="frame" x="58" y="133.66666666666666" width="104" height="18.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fB6-1P-0Zy">
+                                <rect key="frame" x="58" y="192" width="259" height="195"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kxx-F5-1pX" customClass="MyUITextField" customModule="RUCademy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="259" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="NHG-aV-RDk"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter email address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6mN-Ic-mJP" customClass="MyUITextField" customModule="RUCademy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="259" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="VP8-f7-v4T"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QDf-76-kpq" customClass="MyUITextField" customModule="RUCademy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="100" width="259" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="PSc-2f-gMD"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPU-Dh-BAa" customClass="MyButton" customModule="RUCademy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="150" width="259" height="45"/>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.72549019609999998" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="OJS-ue-6Sn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                        <state key="normal" title="Create">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="create:" destination="aXw-Av-KQe" eventType="touchUpInside" id="JSd-3F-7HW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fB6-1P-0Zy" firstAttribute="top" secondItem="MsX-Rt-JZq" secondAttribute="bottom" constant="40" id="5sW-xz-Ue9"/>
+                            <constraint firstItem="MsX-Rt-JZq" firstAttribute="top" secondItem="aq5-WL-wvo" secondAttribute="bottom" constant="8" id="Dzw-Qh-bQD"/>
+                            <constraint firstItem="ocV-mQ-vCG" firstAttribute="trailing" secondItem="fB6-1P-0Zy" secondAttribute="trailing" constant="58" id="G9h-V7-evV"/>
+                            <constraint firstItem="MsX-Rt-JZq" firstAttribute="leading" secondItem="aq5-WL-wvo" secondAttribute="leading" id="SWm-nO-cN4"/>
+                            <constraint firstItem="aq5-WL-wvo" firstAttribute="leading" secondItem="ocV-mQ-vCG" secondAttribute="leading" constant="58" id="W7J-GL-yRH"/>
+                            <constraint firstItem="fB6-1P-0Zy" firstAttribute="leading" secondItem="ocV-mQ-vCG" secondAttribute="leading" constant="58" id="ZhI-xU-j4i"/>
+                            <constraint firstItem="aq5-WL-wvo" firstAttribute="top" secondItem="ocV-mQ-vCG" secondAttribute="top" constant="55" id="drw-QR-jw4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ocV-mQ-vCG"/>
+                    </view>
+                    <connections>
+                        <outlet property="btCreate" destination="kPU-Dh-BAa" id="Hsa-er-xFm"/>
+                        <outlet property="tfEmail" destination="6mN-Ic-mJP" id="9mJ-ML-AWO"/>
+                        <outlet property="tfPassword" destination="QDf-76-kpq" id="GTs-5s-Gf3"/>
+                        <outlet property="tfUsername" destination="kxx-F5-1pX" id="pAe-rK-eYh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ho5-Ab-zgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4521" y="833"/>
+        </scene>
         <!--Article Controller-->
         <scene sceneID="yJH-zx-8V1">
             <objects>

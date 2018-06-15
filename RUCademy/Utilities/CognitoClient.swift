@@ -34,10 +34,19 @@ class CognitoClient {
     
     static func getUserPool() -> AWSCognitoIdentityUserPool {
         let aws_config = AWSServiceConfiguration(region: CognitoIdentityRegion,credentialsProvider: nil)
-        let pool_config = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoClientID,clientSecret: CognitoClientSecret,poolId: CognitoIdentityPoolId)
+        let pool_config = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoClientID,clientSecret: CognitoClientSecret,poolId: CognitoUserPoolId)
         AWSCognitoIdentityUserPool.register(with: aws_config,userPoolConfiguration: pool_config,forKey: "userpool")
         let awsUserPool = AWSCognitoIdentityUserPool(forKey: "userpool")
         return awsUserPool
+    }
+    
+    
+    static func getIdentityProvider() -> AWSCognitoIdentityProvider {
+        let credentialProvider = AWSCognitoCredentialsProvider(regionType: .APNortheast1, identityPoolId: "ap-northeast-1:e0a728a0-1e94-4b9e-a887-8b93fce2826a")
+        let configuration = AWSServiceConfiguration(region: CognitoIdentityRegion, credentialsProvider: credentialProvider)
+        AWSCognitoIdentityProvider.register(with: configuration!, forKey: "provider")
+        let provider = AWSCognitoIdentityProvider(forKey: "provider")
+        return provider
     }
     
     static func getUser(username: String, key: String) -> (user: AWSCognitoIdentityUser, pool: AWSCognitoIdentityUserPool, attribute: AWSCognitoIdentityUserAttributeType ) {

@@ -24,9 +24,12 @@ class LoginViewModel {
         showLoading.set(value: true)
         errorMessage.set(value: "")
         model.login(email: email.get(), password: password.get(), completition: { [unowned self] (group) in
-            let storyBoardId = group.lowercased() == "admin" ? "MainNavigator" : "MainListNavigator"
-            self.presentController.set(value: storyBoardId)
-            self.showLoading.set(value: false)
+            AuthorModel.getAuthors { (datas) in
+                authors = datas
+                let storyBoardId = group.lowercased() == "admin" ? "MainNavigator" : "MainListNavigator"
+                self.presentController.set(value: storyBoardId)
+                self.showLoading.set(value: false)
+            }
         }) { [unowned self] (message) in
             self.showLoading.set(value: false)
             self.errorMessage.set(value: message)

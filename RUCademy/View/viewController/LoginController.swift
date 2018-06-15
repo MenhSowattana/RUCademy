@@ -9,6 +9,7 @@
 import UIKit
 import JWTDecode
 import ReactiveZ
+import AWSCognitoIdentityProvider
 
 class LoginController: BaseController {
     
@@ -26,7 +27,21 @@ class LoginController: BaseController {
     }
     
     @IBAction func login(_ sender: Any) {
-        viewModel.login()
+        measurePerformance {
+            self.viewModel.login()
+        }
+    }
+    
+    @discardableResult
+    func measurePerformance(block: @escaping () -> Void) -> Double {
+        let info = ProcessInfo.processInfo
+        let begin = info.systemUptime
+        DispatchQueue(label: "performance").sync {
+            block()
+        }
+        let diff = info.systemUptime - begin
+        print(diff)
+        return diff
     }
     
 }

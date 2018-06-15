@@ -11,7 +11,6 @@ import UIKit
 class AuthorController: UIViewController {
 
     @IBOutlet weak var tbAuthor: UITableView!
-    var authors: [String] = ["Menh Sowattana", "Menh Sowattana2"]
     var previousCell: AuthorCell?
     var selectedIndex = 0
     weak var viewModel: ArticleViewModel! {

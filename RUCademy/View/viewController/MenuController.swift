@@ -59,7 +59,7 @@ extension MenuController: UITableViewDelegate, UITableViewDataSource {
             storyboardId = "NewArticleController"
             break
         case 1:
-            storyboardId = "NewArticleController"
+            storyboardId = "NewUserController"
             break
         default:
             storyboardId = "SettingController"
