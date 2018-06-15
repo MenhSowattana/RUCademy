@@ -30,6 +30,7 @@
 		F43107BB20CA898200D24EA7 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43107BA20CA898200D24EA7 /* ArticleViewModel.swift */; };
 		F44E0D2920CF6D0C008DADFD /* AuthorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44E0D2820CF6D0C008DADFD /* AuthorModel.swift */; };
 		F44E0D2B20D0EA3E008DADFD /* NewAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44E0D2A20D0EA3E008DADFD /* NewAccountController.swift */; };
+		F44E0D3320D3AB53008DADFD /* RUCademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44E0D3220D3AB53008DADFD /* RUCademyTests.swift */; };
 		F456708C20C6298100AA9CEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456708B20C6298100AA9CEA /* AppDelegate.swift */; };
 		F456708E20C6298100AA9CEA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456708D20C6298100AA9CEA /* LoginController.swift */; };
 		F456709120C6298100AA9CEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F456708F20C6298100AA9CEA /* Main.storyboard */; };
@@ -43,6 +44,16 @@
 		F4DAA6C220C6964C003D7869 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DAA6C120C6964C003D7869 /* Constants.swift */; };
 		F4DAA6C420C69744003D7869 /* NewPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DAA6C320C69744003D7869 /* NewPasswordController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F44E0D3520D3AB53008DADFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F456708020C6298000AA9CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F456708720C6298100AA9CEA;
+			remoteInfo = RUCademy;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4A85095AFDF05A9E7EFF423F /* Pods_RUCademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RUCademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +81,9 @@
 		F43107BA20CA898200D24EA7 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		F44E0D2820CF6D0C008DADFD /* AuthorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorModel.swift; sourceTree = "<group>"; };
 		F44E0D2A20D0EA3E008DADFD /* NewAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountController.swift; sourceTree = "<group>"; };
+		F44E0D3020D3AB53008DADFD /* RUCademyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RUCademyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44E0D3220D3AB53008DADFD /* RUCademyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUCademyTests.swift; sourceTree = "<group>"; };
+		F44E0D3420D3AB53008DADFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F456708820C6298100AA9CEA /* RUCademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RUCademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F456708B20C6298100AA9CEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F456708D20C6298100AA9CEA /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -87,6 +101,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F44E0D2D20D3AB53008DADFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F456708520C6298100AA9CEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,10 +218,20 @@
 			path = viewController;
 			sourceTree = "<group>";
 		};
+		F44E0D3120D3AB53008DADFD /* RUCademyTests */ = {
+			isa = PBXGroup;
+			children = (
+				F44E0D3220D3AB53008DADFD /* RUCademyTests.swift */,
+				F44E0D3420D3AB53008DADFD /* Info.plist */,
+			);
+			path = RUCademyTests;
+			sourceTree = "<group>";
+		};
 		F456707F20C6298000AA9CEA = {
 			isa = PBXGroup;
 			children = (
 				F456708A20C6298100AA9CEA /* RUCademy */,
+				F44E0D3120D3AB53008DADFD /* RUCademyTests */,
 				F456708920C6298100AA9CEA /* Products */,
 				FA3334EF41476DAF598D69BF /* Pods */,
 				CEE070729764C0B8F21C3908 /* Frameworks */,
@@ -211,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				F456708820C6298100AA9CEA /* RUCademy.app */,
+				F44E0D3020D3AB53008DADFD /* RUCademyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,6 +274,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F44E0D2F20D3AB53008DADFD /* RUCademyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F44E0D3920D3AB53008DADFD /* Build configuration list for PBXNativeTarget "RUCademyTests" */;
+			buildPhases = (
+				F44E0D2C20D3AB53008DADFD /* Sources */,
+				F44E0D2D20D3AB53008DADFD /* Frameworks */,
+				F44E0D2E20D3AB53008DADFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F44E0D3620D3AB53008DADFD /* PBXTargetDependency */,
+			);
+			name = RUCademyTests;
+			productName = RUCademyTests;
+			productReference = F44E0D3020D3AB53008DADFD /* RUCademyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F456708720C6298100AA9CEA /* RUCademy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F456709A20C6298100AA9CEA /* Build configuration list for PBXNativeTarget "RUCademy" */;
@@ -267,10 +317,15 @@
 		F456708020C6298000AA9CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Sowattana;
 				TargetAttributes = {
+					F44E0D2F20D3AB53008DADFD = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F456708720C6298100AA9CEA;
+					};
 					F456708720C6298100AA9CEA = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -291,11 +346,19 @@
 			projectRoot = "";
 			targets = (
 				F456708720C6298100AA9CEA /* RUCademy */,
+				F44E0D2F20D3AB53008DADFD /* RUCademyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F44E0D2E20D3AB53008DADFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F456708620C6298100AA9CEA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -373,6 +436,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F44E0D2C20D3AB53008DADFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F44E0D3320D3AB53008DADFD /* RUCademyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F456708420C6298100AA9CEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +477,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F44E0D3620D3AB53008DADFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F456708720C6298100AA9CEA /* RUCademy */;
+			targetProxy = F44E0D3520D3AB53008DADFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F456708F20C6298100AA9CEA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -426,6 +505,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F44E0D3720D3AB53008DADFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8W8M6CAUQE;
+				INFOPLIST_FILE = RUCademyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = riseUP.RUCademyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RUCademy.app/RUCademy";
+			};
+			name = Debug;
+		};
+		F44E0D3820D3AB53008DADFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8W8M6CAUQE;
+				INFOPLIST_FILE = RUCademyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = riseUP.RUCademyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RUCademy.app/RUCademy";
+			};
+			name = Release;
+		};
 		F456709820C6298100AA9CEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -572,6 +687,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F44E0D3920D3AB53008DADFD /* Build configuration list for PBXNativeTarget "RUCademyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F44E0D3720D3AB53008DADFD /* Debug */,
+				F44E0D3820D3AB53008DADFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F456708320C6298000AA9CEA /* Build configuration list for PBXProject "RUCademy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
