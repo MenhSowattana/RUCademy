@@ -14,7 +14,6 @@ import JWTDecode
 class LoginModel: NSObject, AWSCognitoIdentityInteractiveAuthenticationDelegate  {
     
     var newPasswordController: (() -> AWSCognitoIdentityNewPasswordRequired)!
-    
     func startNewPasswordRequired() -> AWSCognitoIdentityNewPasswordRequired {
         return newPasswordController()
     }

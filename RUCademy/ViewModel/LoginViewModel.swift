@@ -26,7 +26,6 @@ class LoginViewModel {
         model.login(email: email.get(), password: password.get(), completition: { [unowned self] (group) in
             AuthorModel.getAuthors { (datas) in
                 authors = datas
-                
             }
             let storyBoardId = group.lowercased() == "admin" ? "MainNavigator" : "MainListNavigator"
             self.presentController.set(value: storyBoardId)
