@@ -1,6 +1,7 @@
 language: swift
 xcode_project: RUCademy.xcodeproj # path to your xcodeproj folder
 xcode_scheme: RUCademyTests
+osx_image: xcode9
 script: xcodebuild -workspace RUCademy.xcworkspace -scheme RUCademy -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3.1' test
 before_install:
  - pod repo update
