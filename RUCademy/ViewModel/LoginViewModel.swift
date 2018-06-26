@@ -13,8 +13,8 @@ import ReactiveZ
 
 class LoginViewModel {
     
-    let email: ObservableField<String> = ObservableField("")
-    let password: ObservableField<String> = ObservableField("")
+    let email: ObservableField<String> = ObservableField("sowattana.menh@r-up.jp")
+    let password: ObservableField<String> = ObservableField("Test@168")
     let errorMessage: ObservableField<String> = ObservableField("")
     let showLoading: ObservableField<Bool> = ObservableField(false)
     let presentController: ObservableField<String> = ObservableField("")
@@ -26,10 +26,10 @@ class LoginViewModel {
         model.login(email: email.get(), password: password.get(), completition: { [unowned self] (group) in
             AuthorModel.getAuthors { (datas) in
                 authors = datas
+                let storyBoardId = group.lowercased() == "admin" ? "MainNavigator" : "MainListNavigator"
+                self.presentController.set(value: storyBoardId)
+                self.showLoading.set(value: false)
             }
-            let storyBoardId = group.lowercased() == "admin" ? "MainNavigator" : "MainListNavigator"
-            self.presentController.set(value: storyBoardId)
-            self.showLoading.set(value: false)
         }) { [unowned self] (message) in
             self.showLoading.set(value: false)
             self.errorMessage.set(value: message)

@@ -26,16 +26,34 @@ class NewAccountController: UIViewController {
         emailAttr?.name = "name"
         emailAttr?.value = tfUsername.text!
         CognitoClient.getUserPool().signUp(tfEmail.text!, password: tfPassword.text!, userAttributes: [emailAttr!], validationData: nil).continueWith { (task) -> Any? in
-            DispatchQueue.main.async {
-                guard let _ = task.result, task.error == nil else {
-                    print(task.error?.localizedDescription ?? "")
-                    return
+          
+                guard let session = task.result, task.error == nil else {
+                    print(task.error?.localizedDescription)
+                    return nil
                 }
-                print("Sign up success")
-            }
+            
+            let request = AWSCognitoIdentityProviderAdminAddUserToGroupRequest()
+            request?.username = session.userSub
+            request?.groupName = "EndUser"
+            request?.userPoolId = CognitoUserPoolId
+            CognitoClient.getIdentityProvider().adminAddUser(toGroup: request!).continueWith(block: { (task) -> Any? in
+                guard let _ = task.result, task.error == nil else {
+                    print(task.error?.localizedDescription)
+                    return nil
+                }
+                let request = AWSCognitoIdentityProviderAdminConfirmSignUpRequest()
+                request?.userPoolId = CognitoUserPoolId
+                request?.username = session.user.username
+                CognitoClient.getIdentityProvider().adminConfirmSignUp(request!).continueWith(block: { (task) -> Any? in
+                    guard let _ = task.result, task.error == nil else {
+                        print(task.error?.localizedDescription)
+                        return nil
+                    }
+                    return nil
+                })
+                return nil
+            })
             return nil
         }
-        
-       
     }
 }
