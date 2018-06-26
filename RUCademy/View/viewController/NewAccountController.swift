@@ -7,53 +7,34 @@
 //
 
 import UIKit
-import AWSCognito
-import AWSCognitoIdentityProvider
+import ReactiveZ
 
 class NewAccountController: UIViewController {
     
+    @IBOutlet weak var lbError: UILabel!
     @IBOutlet weak var tfUsername: MyUITextField!
     @IBOutlet weak var tfEmail: MyUITextField!
     @IBOutlet weak var tfPassword: MyUITextField!
     @IBOutlet weak var btCreate: MyButton!
+    let viewModel = NewAccountViewModel()
+    let disposal = Disposal()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tfUsername.rz.bind(to: viewModel.name, disPosal: disposal)
+        tfEmail.rz.bind(to: viewModel.email, disPosal: disposal)
+        tfPassword.rz.bind(to: viewModel.password, disPosal: disposal)
+        lbError.rz.bind(to: viewModel.errorMessage, disPosal: disposal)
+        viewModel.showLoading.observe { [unowned self] (isLoading) in
+            self.btCreate.setLoading(loading: isLoading)
+        }
     }
     
     @IBAction func create(_ sender: Any) {
-        let emailAttr = AWSCognitoIdentityUserAttributeType()
-        emailAttr?.name = "name"
-        emailAttr?.value = tfUsername.text!
-        CognitoClient.getUserPool().signUp(tfEmail.text!, password: tfPassword.text!, userAttributes: [emailAttr!], validationData: nil).continueWith { (task) -> Any? in
-          
-                guard let session = task.result, task.error == nil else {
-                    print(task.error?.localizedDescription)
-                    return nil
-                }
-            
-            let request = AWSCognitoIdentityProviderAdminAddUserToGroupRequest()
-            request?.username = session.userSub
-            request?.groupName = "EndUser"
-            request?.userPoolId = CognitoUserPoolId
-            CognitoClient.getIdentityProvider().adminAddUser(toGroup: request!).continueWith(block: { (task) -> Any? in
-                guard let _ = task.result, task.error == nil else {
-                    print(task.error?.localizedDescription)
-                    return nil
-                }
-                let request = AWSCognitoIdentityProviderAdminConfirmSignUpRequest()
-                request?.userPoolId = CognitoUserPoolId
-                request?.username = session.user.username
-                CognitoClient.getIdentityProvider().adminConfirmSignUp(request!).continueWith(block: { (task) -> Any? in
-                    guard let _ = task.result, task.error == nil else {
-                        print(task.error?.localizedDescription)
-                        return nil
-                    }
-                    return nil
-                })
-                return nil
-            })
-            return nil
-        }
+        viewModel.createAccount()
+    }
+    
+    deinit {
+        disposal.dispose()
     }
 }

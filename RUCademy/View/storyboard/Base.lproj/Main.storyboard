@@ -610,7 +610,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fB6-1P-0Zy">
-                                <rect key="frame" x="58" y="192" width="259" height="195"/>
+                                <rect key="frame" x="58" y="192" width="259" height="219.33333333333337"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kxx-F5-1pX" customClass="MyUITextField" customModule="RUCademy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="259" height="40"/>
@@ -691,6 +691,12 @@
                                             <action selector="create:" destination="aXw-Av-KQe" eventType="touchUpInside" id="JSd-3F-7HW"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qf0-6G-udZ">
+                                        <rect key="frame" x="0.0" y="205" width="259" height="14.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="1" green="0.3200220017" blue="0.26560666189999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -708,6 +714,7 @@
                     </view>
                     <connections>
                         <outlet property="btCreate" destination="kPU-Dh-BAa" id="Hsa-er-xFm"/>
+                        <outlet property="lbError" destination="qf0-6G-udZ" id="fvg-Lg-r5k"/>
                         <outlet property="tfEmail" destination="6mN-Ic-mJP" id="9mJ-ML-AWO"/>
                         <outlet property="tfPassword" destination="QDf-76-kpq" id="GTs-5s-Gf3"/>
                         <outlet property="tfUsername" destination="kxx-F5-1pX" id="pAe-rK-eYh"/>
